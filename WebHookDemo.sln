@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFunctions", "AzureFunctions\AzureFunctions.csproj", "{61A28ECF-AB19-40E3-8B12-38B230AE23A0}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "AzureApps", "AzureApps\AzureApps.deployproj", "{869B8E0E-C21D-4F07-9D29-1D64483C9276}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "AzureAppStorage", "AzureAppStorage\AzureAppStorage.deployproj", "{31A30F96-5D48-4114-92ED-90FCD928F887}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36DE6CF1-08B9-4904-9E61-3189E23ECFB9}"
+	ProjectSection(SolutionItems) = preProject
+		AddWebHookSubscription.ps1 = AddWebHookSubscription.ps1
+		ImportWebHookDemo.ps1 = ImportWebHookDemo.ps1
+		README.md = README.md
+		READMESharePointDeployment.md = READMESharePointDeployment.md
+		WebHookDemo.xml = WebHookDemo.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsHandlerAddIn", "EventsHandlerAddIn\EventsHandlerAddIn.csproj", "{9E502325-7D58-4623-8177-6EA757186751}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61A28ECF-AB19-40E3-8B12-38B230AE23A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A28ECF-AB19-40E3-8B12-38B230AE23A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A28ECF-AB19-40E3-8B12-38B230AE23A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A28ECF-AB19-40E3-8B12-38B230AE23A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869B8E0E-C21D-4F07-9D29-1D64483C9276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869B8E0E-C21D-4F07-9D29-1D64483C9276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869B8E0E-C21D-4F07-9D29-1D64483C9276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869B8E0E-C21D-4F07-9D29-1D64483C9276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A30F96-5D48-4114-92ED-90FCD928F887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A30F96-5D48-4114-92ED-90FCD928F887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A30F96-5D48-4114-92ED-90FCD928F887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A30F96-5D48-4114-92ED-90FCD928F887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E502325-7D58-4623-8177-6EA757186751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E502325-7D58-4623-8177-6EA757186751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E502325-7D58-4623-8177-6EA757186751}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9E502325-7D58-4623-8177-6EA757186751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E502325-7D58-4623-8177-6EA757186751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E502325-7D58-4623-8177-6EA757186751}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {899AEE2E-6E05-4A2F-A6A9-822B49D9EDEB}
+	EndGlobalSection
+EndGlobal

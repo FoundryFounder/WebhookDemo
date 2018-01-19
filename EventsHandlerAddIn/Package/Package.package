@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2b09aa2f-38b7-4c9f-90ba-7c4a368c7b80" solutionId="2b09aa2f-38b7-4c9f-90ba-7c4a368c7b80" resetWebServer="false" sharePointProductVersion="15.0" name="PersonEventsNotifierAddIn" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="e4ad6551-a3db-4451-a54a-4458c58f6102" />
+  </features>
+</package>

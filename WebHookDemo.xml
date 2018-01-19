@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2017/05/ProvisioningSchema">
+	<pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.19.1710.2, Culture=neutral, PublicKeyToken=3751622786b357c2" />
+	<pnp:Templates ID="CONTAINER-TEMPLATE-5F0B4F9F3BBF433BB66DB5551BE0831F">
+		<pnp:ProvisioningTemplate ID="TEMPLATE-5F0B4F9F3BBF433BB66DB5551BE0831F" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+			<pnp:Lists>
+				<pnp:ListInstance Title="Webhook List" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/WebhookList" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/WebhookList/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/WebhookList/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/WebhookList/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" ValidationFormula="" ValidationMessage="">
+					<pnp:ContentTypeBindings>
+						<pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+						<pnp:ContentTypeBinding ContentTypeID="0x0120" />
+					</pnp:ContentTypeBindings>
+					<pnp:Views>
+						<View Name="{988790EF-FC1A-4DA1-938D-FBC9AE31C7D2}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/WebhookDemo/Lists/WebhookList/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+							<Query>
+								<OrderBy>
+									<FieldRef Name="ID" />
+								</OrderBy>
+							</Query>
+							<ViewFields>
+								<FieldRef Name="LinkTitle" />
+								<FieldRef Name="PaymentStatus" />
+								<FieldRef Name="WebhookProcessed" />
+							</ViewFields>
+							<RowLimit Paged="TRUE">30</RowLimit>
+							<JSLink>clienttemplates.js</JSLink>
+						</View>
+					</pnp:Views>
+					<pnp:Fields>
+						<Field Type="Choice" DisplayName="Payment Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{3042128a-ffdf-4fb8-9896-1c0733954dc3}" SourceID="{{listid:Webhook List}}" StaticName="Payment Status" Name="PaymentStatus" ColName="nvarchar4" RowOrdinal="0">
+							<Default>Pending</Default>
+							<CHOICES>
+								<CHOICE>Pending</CHOICE>
+								<CHOICE>Processed</CHOICE>
+							</CHOICES>
+						</Field>
+						<Field Type="DateTime" DisplayName="Webhook Processed" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{fde43dcc-d67d-45b6-ace9-f8d51bcf8876}" SourceID="{{listid:Webhook List}}" StaticName="WebhookProcessed" Name="WebhookProcessed" ColName="datetime1" RowOrdinal="0" />
+					</pnp:Fields>
+				</pnp:ListInstance>
+				<pnp:ListInstance Title="Webhook History" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/WebhookHistory" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/WebhookHistory/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/WebhookHistory/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/WebhookHistory/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=44" ValidationFormula="" ValidationMessage="">
+					<pnp:ContentTypeBindings>
+						<pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+						<pnp:ContentTypeBinding ContentTypeID="0x0120" />
+					</pnp:ContentTypeBindings>
+					<pnp:Views>
+						<View Name="{6991EC63-5BCA-4590-BEA7-1C554F2A19AD}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="/sites/WebhookDemo/Lists/WebhookHistory/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=44">
+							<Query>
+								<OrderBy>
+									<FieldRef Name="ProcessorStart" Ascending="FALSE" />
+								</OrderBy>
+							</Query>
+							<ViewFields>
+								<FieldRef Name="LinkTitle" />
+								<FieldRef Name="EndingChangeToken" />
+								<FieldRef Name="ProcessorStart" />
+								<FieldRef Name="ProcessorEnd" />
+								<FieldRef Name="ProcessorItemsReceived" />
+								<FieldRef Name="ProcessorItemsProcessed" />
+							</ViewFields>
+							<RowLimit Paged="TRUE">30</RowLimit>
+							<Aggregations Value="Off" />
+							<JSLink>clienttemplates.js</JSLink>
+						</View>
+					</pnp:Views>
+					<pnp:Fields>
+						<Field Type="Text" DisplayName="Ending Change Token" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{e8dd9580-c19d-47dd-b499-2c6cb3aeb8a4}" SourceID="{{listid:Webhook History}}" StaticName="EndingChangeToken" Name="EndingChangeToken" ColName="nvarchar4" RowOrdinal="0" CustomFormatter="" Version="1" />
+						<Field Type="DateTime" DisplayName="Processor Start" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{2fb84f7e-6a57-4186-af59-58de270f9c78}" SourceID="{{listid:Webhook History}}" StaticName="ProcessorStart" Name="ProcessorStart" ColName="datetime1" RowOrdinal="0" CustomFormatter="" CalType="0" Version="1" />
+						<Field Type="DateTime" DisplayName="Processor End" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{b42f7bf8-7460-4899-ba1b-d369a9ae9dfd}" SourceID="{{listid:Webhook History}}" StaticName="ProcessorEnd" Name="ProcessorEnd" ColName="datetime2" RowOrdinal="0" CustomFormatter="" CalType="0" Version="1" />
+						<Field Type="Number" DisplayName="Processor Items Received" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{0df4be60-58a3-4efe-92f0-019334b42514}" SourceID="{{listid:Webhook History}}" StaticName="ProcessorItemsReceived" Name="ProcessorItemsReceived" ColName="float1" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="1" />
+						<Field Type="Number" DisplayName="Processor Items Processed" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{a77e2aef-0b35-4b81-88a0-4ac888b8f3b6}" SourceID="{{listid:Webhook History}}" StaticName="ProcessorItemsProcessed" Name="ProcessorItemsProcessed" ColName="float2" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="1" />
+					</pnp:Fields>
+				</pnp:ListInstance>
+			</pnp:Lists>
+		</pnp:ProvisioningTemplate>
+	</pnp:Templates>
+</pnp:Provisioning>

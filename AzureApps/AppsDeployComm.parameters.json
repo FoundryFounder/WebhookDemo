@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appServicePlanName": {
+      "value": "CFWebHookAppServiceDEVPlan"
+    },
+    "appServiceName": {
+      "value": "CFWebHookAppServiceDEV"
+    },
+    "appServiceUrlPrefix": {
+      "value": "CFWebHookAppServiceDEV"
+    },
+    "hostUrl": {
+      "value": "CFWebHookAppServiceDEV.azurewebsites.net"
+    },
+    "UrlSuffix": {
+      "value": ".azurewebsites.net"
+    },
+    "storageAccountName": {
+      "value": "cfwebhookstoredev"
+    },
+    "storageEndPointSuffix": {
+      "value": "core.windows.net"
+    },
+    "AppClientSecret": {
+      "value": "BApXH0SiWdZFMpFm+SRxjQKyk+s4xb4hP+y63we0jik="
+    },
+    "AppClientId": {
+      "value": "b3a4dc5d-3e40-429d-b452-b1592e696ba7"
+    },
+    "O365TenantName": {
+      "value": "foundry323.sharepoint.com"
+    }
+  }
+}
