@@ -57,7 +57,6 @@
         "family": "S",
         "capacity": 1
       },
-      "kind": "app",
       "name": "[parameters('appServicePlanName')]",
       "apiVersion": "2016-09-01",
       "location": "[resourceGroup().location]",
